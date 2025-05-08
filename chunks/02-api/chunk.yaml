@@ -1,19 +1,25 @@
 variants:
-  # - name: "26"
-  #   args:
-  #     SDK_VERSION: 26
-  # - name: "27"
-  #   args:
-  #     SDK_VERSION: 27
-  # - name: "28"
-  #   args:
-  #     SDK_VERSION: 28
-  # - name: "29"
-  #   args:
-  #     SDK_VERSION: 29
-  # - name: "30"
-  #   args:
-  #     SDK_VERSION: 30
+  - name: "24"
+    args:
+      SDK_VERSION: 24
+  - name: "25"
+    args:
+      SDK_VERSION: 25
+  - name: "26"
+    args:
+      SDK_VERSION: 26
+  - name: "27"
+    args:
+      SDK_VERSION: 27
+  - name: "28"
+    args:
+      SDK_VERSION: 28
+  - name: "29"
+    args:
+      SDK_VERSION: 29
+  - name: "30"
+    args:
+      SDK_VERSION: 30
   - name: "31"
     args:
       SDK_VERSION: 31
