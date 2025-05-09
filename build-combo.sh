@@ -48,7 +48,7 @@ function get_chunks() {
 	done
 }
 
-REPO=localhost:5000/dazzle
+source setup-repo.sh
 
 save_original
 

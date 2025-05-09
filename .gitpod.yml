@@ -19,7 +19,7 @@ tasks:
   - name: dazzle build and test
     command: |
       gp ports await 5000
-      REPO=localhost:5000/dazzle
+      REPO=localhost:5000/android-cimg
       echo "To build specific chunks and combine them 'time ./build-chunk.sh  -c chunk1 -c chunk2:variant1.2.3 -n combo'"
       echo "To build all the chunks and combinations 'time ./build-all.sh'"
       echo "To build a specific combination 'time ./build-combo.sh combo'"

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-REPO=localhost:5000/dazzle
+source setup-repo.sh
 # First, build chunks without hashes
 dazzle build $REPO -v --chunked-without-hash
 # Second, build again, but with hashes

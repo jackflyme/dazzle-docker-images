@@ -6,7 +6,7 @@ trap ctrl_c EXIT
 source build-common.sh
 
 readonly TEMP_FILE=".dazzle.yaml.temp"
-readonly REPO="localhost:5000/dazzle"
+source setup-repo.sh
 
 function usage() {
 	cat <<EOF
