@@ -44,3 +44,9 @@ variants:
   - name: "8.7"
     args:
       GRADLE_VERSION: 8.7
+  - name: "8.8"
+    args:
+      GRADLE_VERSION: 8.8
+  - name: "8.9"
+    args:
+      GRADLE_VERSION: 8.9

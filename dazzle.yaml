@@ -1,6 +1,6 @@
 combiner:
   combinations:
-    # Java ------------
+    # JDK ------------
     - name: jdk8
       chunks:
         - 03-java:8
@@ -12,6 +12,10 @@ combiner:
     - name: jdk17
       chunks:
         - 03-java:17
+
+    - name: jdk21
+      chunks:
+        - 03-java:21
 
     # cmdline -------------
     - name: cmdline
@@ -28,6 +32,13 @@ combiner:
       ref:
         - api-base
       chunks:
+        - 02-api:24
+        - 02-api:25
+        - 02-api:26
+        - 02-api:27
+        - 02-api:28
+        - 02-api:29
+        - 02-api:30
         - 02-api:31
         - 02-api:32
         - 02-api:33
@@ -50,6 +61,11 @@ combiner:
         - api-base
       chunks:
         - 03-java:17
+    - name: api-base-jdk21
+      ref:
+        - api-base
+      chunks:
+        - 03-java:21
 
     - name: api-full-jdk8
       ref:
@@ -66,6 +82,11 @@ combiner:
         - api-full
       chunks:
         - 03-java:17
+    - name: api-full-jdk21
+      ref:
+        - api-full
+      chunks:
+        - 03-java:21
 
     # Gradle full variants  -----------------
     - name: api-full-gradle-6.5
@@ -91,6 +112,12 @@ combiner:
         - api-full-jdk17
       chunks:
         - 04-gradle:8.2
+   
+    - name: api-full-gradle-8.7
+      ref:
+        - api-full-jdk17
+      chunks:
+        - 04-gradle:8.7
     
     # slim variants  -----------------
     - name: api-34-gradle-8.2
@@ -99,6 +126,12 @@ combiner:
       chunks:
         - 02-api:34
         - 04-gradle:8.2
+    - name: api-34-gradle-8.7
+      ref:
+        - api-base-jdk17
+      chunks:
+        - 02-api:34
+        - 04-gradle:8.7
 
 
   envvars:
