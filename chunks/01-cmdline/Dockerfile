@@ -1,6 +1,6 @@
 ARG base
 
-FROM localhost:5000/dazzle:jdk17 AS builder
+FROM localhost:5000/android-cimg:jdk17 AS builder
 
 USER root
 

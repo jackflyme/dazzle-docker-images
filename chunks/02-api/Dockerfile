@@ -1,7 +1,7 @@
 ARG base
 
 
-FROM localhost:5000/dazzle:cmdline AS cmdline
+FROM localhost:5000/android-cimg:cmdline AS cmdline
 USER root
 
 ARG SDK_VERSION
