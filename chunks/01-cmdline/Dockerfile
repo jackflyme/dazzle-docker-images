@@ -22,9 +22,7 @@ RUN SDK_TOOLS_URL="https://dl.google.com/android/repository/commandlinetools-lin
     mv ${ANDROID_HOME}/cmdline-tools/cmdline-tools ${ANDROID_HOME}/cmdline-tools/latest
 
 RUN bash -c ". ${HOME}/.sdkman/bin/sdkman-init.sh  && \
-    echo y | sdkmanager 'platform-tools'  \
-    'extras;android;m2repository' \
-    'extras;google;m2repository'"
+    echo y | sdkmanager 'platform-tools'"
 
 FROM ${base} AS android
 USER root
