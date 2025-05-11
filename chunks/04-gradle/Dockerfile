@@ -13,3 +13,6 @@ RUN bash -c ". ${HOME}/.sdkman/bin/sdkman-init.sh \
              && sdk default gradle ${GRADLE_VERSION} \
              && sdk flush archives \
              && sdk flush temp"
+
+ENV GRADLE_HOME=${HOME}/.sdkman/candidates/gradle/current
+ENV PATH="${GRADLE_HOME}/bin:${PATH}"

@@ -14,6 +14,7 @@ RUN bash -c ". ${HOME}/.sdkman/bin/sdkman-init.sh \
              && sdk install java ${JAVA_VERSION} \
              && sdk default java ${JAVA_VERSION} \
              && sdk flush archives \
-             && sdk flush temp \
-             && echo 'export SDKMAN_DIR=\"${HOME}/.sdkman\"' >> ${HOME}/.bashrc.d/99-java \
-             && echo '[[ -s \"${HOME}/.sdkman/bin/sdkman-init.sh\" ]] && source \"${HOME}/.sdkman/bin/sdkman-init.sh\"' >> ${HOME}/.bashrc.d/99-java"
+             && sdk flush temp"
+
+ENV JAVA_HOME=${HOME}/.sdkman/candidates/java/current
+ENV PATH="${JAVA_HOME}/bin:${PATH}"
