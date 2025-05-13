@@ -1,4 +1,7 @@
 variants:
+  - name: 17.2.4988734
+    args:
+      NDK_VERSION: 17.2.4988734
   - name: 18.1.5063045
     args:
       NDK_VERSION: 18.1.5063045
