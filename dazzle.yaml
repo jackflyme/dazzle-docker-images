@@ -121,27 +121,20 @@ combiner:
         - api-full-jdk17
       chunks:
         - 04-gradle:8.2
+
     - name: api-full-gradle-8.2-ndk-18.1.5063045
       ref:
         - api-full-gradle-8.2
       chunks:
         - 05-cmake
         - 06-ndk:18.1.5063045
+    
     - name: api-full-gradle-8.2-ndk-17.2.4988734
       ref:
         - api-full-gradle-8.2
       chunks:
         - 05-cmake
         - 06-ndk:17.2.4988734
-    - name: api-24t30-gradle-8.2-ndk-17.2.4988734
-      ref:
-        - api-24t30
-        - jdk17
-      chunks:
-        - 04-gradle:8.2
-        - 05-cmake
-        - 06-ndk:17.2.4988734
-    
     - name: api-full-gradle-8.2-ndk-24.0.8215888
       ref:
         - api-full-gradle-8.2
@@ -149,6 +142,55 @@ combiner:
         - 05-cmake
         - 06-ndk:24.0.8215888
    
+    - name: api-24t30-gradle-6.5
+      ref:
+        - api-24t30
+        - jdk8
+      chunks:
+        - 04-gradle:6.5
+
+    - name: api-24t30-gradle-7.3
+      ref:
+        - api-24t30
+        - jdk11
+      chunks:
+        - 04-gradle:7.3
+    
+    - name: api-31t35-gradle-7.3
+      ref:
+        - api-31t35
+        - jdk11
+      chunks:
+        - 04-gradle:7.3
+
+    - name: api-31t35-gradle-8.0
+      ref:
+        - api-31t35
+        - jdk17
+      chunks:
+        - 04-gradle:8.0
+
+    - name: api-31t35-gradle-8.2
+      ref:
+        - api-31t35
+        - jdk17
+      chunks:
+        - 04-gradle:8.2
+    
+    - name: api-24t30-gradle-8.2
+      ref:
+        - api-24t30
+        - jdk17
+      chunks:
+        - 04-gradle:8.2
+    
+    - name: api-24t30-gradle-8.2-ndk-17.2.4988734
+      ref:
+        - api-24t30-gradle-8.2
+      chunks:
+        - 05-cmake
+        - 06-ndk:17.2.4988734
+    
     - name: api-full-gradle-8.7
       ref:
         - api-full-jdk17
@@ -162,6 +204,7 @@ combiner:
       chunks:
         - 02-api:34
         - 04-gradle:8.2
+    
     - name: api-34-gradle-8.7
       ref:
         - api-base-jdk17
