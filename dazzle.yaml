@@ -28,7 +28,7 @@ combiner:
     - name: api-base
       chunks:
         - 01-cmdline
-    - name: api-full
+    - name: api-24t30
       ref:
         - api-base
       chunks:
@@ -39,11 +39,20 @@ combiner:
         - 02-api:28
         - 02-api:29
         - 02-api:30
+    - name: api-31t35
+      ref:
+        - api-base
+      chunks:
         - 02-api:31
         - 02-api:32
         - 02-api:33
         - 02-api:34
         - 02-api:35
+    - name: api-full
+      ref:
+       - api-base
+       - api-24t30
+       - api-31t35
 
     # JDK variants  -----------------
     - name: api-base-jdk8
@@ -112,6 +121,33 @@ combiner:
         - api-full-jdk17
       chunks:
         - 04-gradle:8.2
+    - name: api-full-gradle-8.2-ndk-18.1.5063045
+      ref:
+        - api-full-gradle-8.2
+      chunks:
+        - 05-cmake
+        - 06-ndk:18.1.5063045
+    - name: api-full-gradle-8.2-ndk-17.2.4988734
+      ref:
+        - api-full-gradle-8.2
+      chunks:
+        - 05-cmake
+        - 06-ndk:17.2.4988734
+    - name: api-24t30-gradle-8.2-ndk-17.2.4988734
+      ref:
+        - api-24t30
+        - jdk17
+      chunks:
+        - 04-gradle:8.2
+        - 05-cmake
+        - 06-ndk:17.2.4988734
+    
+    - name: api-full-gradle-8.2-ndk-24.0.8215888
+      ref:
+        - api-full-gradle-8.2
+      chunks:
+        - 05-cmake
+        - 06-ndk:24.0.8215888
    
     - name: api-full-gradle-8.7
       ref:
