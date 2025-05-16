@@ -16,7 +16,7 @@ RUN bash -c ". ${HOME}/.sdkman/bin/sdkman-init.sh  && \
 FROM ${base} AS android
 USER root
 
-ENV TRIGGER_REBUILD=1
+ENV TRIGGER_REBUILD=5
 
 ENV ANDROID_HOME "${HOME}/.android-sdk"
 COPY --from=cmdline ${ANDROID_HOME}/cmake ${ANDROID_HOME}/cmake

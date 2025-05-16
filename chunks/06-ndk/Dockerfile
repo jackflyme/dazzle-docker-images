@@ -12,7 +12,7 @@ RUN bash -c ". ${HOME}/.sdkman/bin/sdkman-init.sh  && \
 
 FROM ${base} AS android
 USER root
-ENV TRIGGER_REBUILD=1
+ENV TRIGGER_REBUILD=6
 
 ENV ANDROID_HOME "${HOME}/.android-sdk"
 COPY --from=cmdline ${ANDROID_HOME}/ndk ${ANDROID_HOME}/ndk
