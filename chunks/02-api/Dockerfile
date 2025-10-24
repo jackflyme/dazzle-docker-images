@@ -7,9 +7,9 @@ USER root
 ARG SDK_VERSION
 
 # Install Android SDK Tools
-COPY sdk_packages_${SDK_VERSION}.txt sdk_packages.txt
+COPY install_packages.sh install_packages.sh
 RUN bash -c ". ${HOME}/.sdkman/bin/sdkman-init.sh  && \
-    echo y | sdkmanager --package_file=sdk_packages.txt"
+    echo y | . install_packages.sh"
 
 FROM ${base} AS android
 USER root

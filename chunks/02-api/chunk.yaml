@@ -35,3 +35,6 @@ variants:
   - name: "35"
     args:
       SDK_VERSION: 35
+  - name: "36"
+    args:
+      SDK_VERSION: 36
