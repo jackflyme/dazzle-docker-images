@@ -34,3 +34,5 @@ ENV ANDROID_HOME "${HOME}/.android-sdk"
 ENV ANDROID_SDK_ROOT $ANDROID_HOME
 ENV PATH="${ANDROID_HOME}/emulator:${ANDROID_HOME}/cmdline-tools/latest/bin:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/platform-tools/bin:${PATH}"
 COPY --from=builder ${ANDROID_HOME} ${ANDROID_HOME}
+
+LABEL org.opencontainers.image.source=https://github.com/Jacknic/dazzle-docker-images
